@@ -14,7 +14,7 @@ SET search_path to Covid;
 
 CREATE TABLE statistical_areas (
 	area_id	     INTEGER PRIMARY KEY,
-	area_name VARCHAR(50) , 
+	area_name VARCHAR(50) ,
 	parent_area_id INTEGER
 );
 
@@ -29,7 +29,7 @@ CREATE TABLE neighbourhoods (
 	avg_monthly_rent INTEGER);
 
 CREATE TABLE census_stats (
-	area_id INTEGER PRIMARY KEY, 
+	area_id INTEGER PRIMARY KEY,
 	median_annual_household_income INTEGER,
 	avg_monthly_rent INTEGER);
 
@@ -57,7 +57,6 @@ CREATE TABLE population_stats_2016 (
 	total_persons INTEGER,
 	females INTEGER,
 	males INTEGER);
-
 
 CREATE TABLE heath_services (
 	id INTEGER PRIMARY KEY,
@@ -88,3 +87,14 @@ CREATE TABLE nsw_testsites (
 	longitude NUMERIC,
 	latitude NUMERIC,
 	test_capacity INTEGER);
+
+CREATE TABLE covid_tests  (
+	test_id INTEGER PRIMARY KEY,
+	test_date DATE,
+	postcode CHAR(4),
+	lhd_2010_code CHAR(4),
+	lhd_2010_name VARCHAR(50),
+	lga_code19 INTEGER,
+	lga_name19 VARCHAR(50),
+	result VARCHAR(50)
+);
