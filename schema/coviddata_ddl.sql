@@ -19,14 +19,20 @@ CREATE TABLE statistical_areas (
 );
 
 CREATE TABLE neighbourhoods (
-	area_id INTEGER PRIMARY KEY,
+	area_id INTEGER NOT NULL,
 	area_name VARCHAR(50),
 	land_area NUMERIC,
 	population INTEGER,
 	number_of_dwellings INTEGER,
 	number_of_businesses INTEGER,
 	median_annual_household_income INTEGER,
-	avg_monthly_rent INTEGER);
+	avg_monthly_rent INTEGER,
+	PRIMARY KEY (area_id),
+	FOREIGN KEY(area_id) REFERENCES statistical_areas(area_id)
+
+);
+
+
 
 CREATE TABLE census_stats (
 	area_id INTEGER PRIMARY KEY,
@@ -56,12 +62,13 @@ CREATE TABLE population_stats_2016 (
 	age_85_and_over INTEGER,
 	total_persons INTEGER,
 	females INTEGER,
-	males INTEGER);
+	males INTEGER
+);
 
-CREATE TABLE heath_services (
+CREATE TABLE health_services (
 	id INTEGER PRIMARY KEY,
-	name VARCHAR(50),
-	category VARCHAR(50),
+	name VARCHAR(100),
+	category VARCHAR(100),
 	num_beds INTEGER,
 	address VARCHAR(100),
 	suburb VARCHAR(50),
@@ -98,3 +105,10 @@ CREATE TABLE covid_tests  (
 	lga_name19 VARCHAR(50),
 	result VARCHAR(50)
 );
+
+-- Could not execute the code below
+--CREATE TABLE sa2_data (
+ --               id INTEGER PRIMARY KEY,
+   --             name VARCHAR(50),
+   --             geom GEOMETRY(MULTIPOLYGON,4326)
+--	)
