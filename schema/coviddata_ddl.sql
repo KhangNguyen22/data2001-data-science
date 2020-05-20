@@ -81,7 +81,7 @@ CREATE TABLE health_services (
 
 CREATE TABLE nsw_postcodes (
 	id INTEGER PRIMARY KEY,
-	postcode INTEGER,
+	postcode CHAR(4),
 	locality VARCHAR(50),
 	longitude NUMERIC,
 	latitude NUMERIC);
