@@ -106,6 +106,13 @@ CREATE TABLE covid_tests  (
 	result VARCHAR(50)
 );
 
+CREATE TABLE schools (
+	school_id SERIAL PRIMARY KEY,
+	school_name VARCHAR(100) NOT NULL,
+	postcode CHAR(4) NOT NULL,
+	longitude NUMERIC,
+	latitude NUMERIC
+);
 -- Could not execute the code below
 --CREATE TABLE sa2_data (
  --               id INTEGER PRIMARY KEY,
