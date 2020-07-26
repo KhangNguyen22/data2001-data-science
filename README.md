@@ -1,11 +1,3 @@
-## Hello! ## 
+## Covid-19 Vulnerability Analysis Visual Map## 
 
-### How 2 Git ###
-
-```git pull``` - updates your local repo to the most recent version
-
-```git add .``` - adds all the changes and files made on your local version
-
-```git commit -m "<message>" ``` - commits your changes. Replace message with a simple commit message
-
-```git push``` - updates the repository to your latest version
+This project involved using the requests module, web scraping the health NSW website to create an up-to-date map of Coronavirus vulnerability within Sydney. This vulnerability analysis is theoretical, so should not be used for actual decision making.
